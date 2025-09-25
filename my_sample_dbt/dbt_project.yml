@@ -1,0 +1,13 @@
+name: my_sample_dbt
+
+config-version: 2
+version: "1.0.0"
+
+profile: my_sample_dbt
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macro"]
+snapshot-paths: ["snapshots"]
