@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   postgres:
     image: postgres:15
@@ -9,6 +8,8 @@ services:
       POSTGRES_DB: dbt_database
     ports:
       - "5432:5432"
+    networks:
+      - my_network
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -18,6 +19,8 @@ services:
       dockerfile: Dockerfile.dbt
     stdin_open: true
     tty: true
+    networks:
+      - my_network
     volumes:
       - ./my_sample_dbt:/usr/app/my_sample_dbt  # Mount your dbt project               # Mount your dbt profiles (optional, for local profiles)
     depends_on:
@@ -25,3 +28,6 @@ services:
 
 volumes:
   postgres_data:
+
+networks:
+  my_network:
