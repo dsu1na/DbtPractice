@@ -11,3 +11,12 @@ test-paths: ["tests"]
 analysis-paths: ["analyses"]
 macro-paths: ["macro"]
 snapshot-paths: ["snapshots"]
+
+models:
+  my_sample_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+    intermediate:
+      +materialized: view

@@ -1,0 +1,23 @@
+models:
+  - name: stg_kaggle__customers
+    description: "This is the staging model for the customers data from Kaggle"
+    columns:
+      - name: customer_id
+        description: "The unique identifier for each customer"
+        tests:
+          - unique
+          - not_null
+      - name: gender
+        description: "The gender of the customer"
+      - name: age
+        description: "The age of the customer"
+      - name: annual_income
+        description: "The annual income of the customer in USD"
+      - name: spending_score
+        description: "The spending score assigned to the customer"
+      - name: profession
+        description: "The profession of the customer"
+      - name: work_experience
+        description: "The years of work experience the customer has"
+      - name: family_size
+        description: "The family size of the customer"
