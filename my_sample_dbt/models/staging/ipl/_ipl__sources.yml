@@ -1,0 +1,61 @@
+sources:
+  - name: kaggle
+    description: "This source contains data from Kaggle datasets"
+    database: kaggle_db
+    schema: IPL
+    tables:
+      - name: ball_by_ball
+        description: "Raw ball-by-ball data from Kaggle"
+        columns:
+          - name: match_id
+            description: "The unique identifier for each match"
+            data_tests:
+              - not_null
+      
+      - name: matches
+        description: "Raw matches data from Kaggle"
+        columns:
+          - name: match_id
+            description: "The unique identifier for each match"
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: player_matches
+        description: "Raw player matches data from Kaggle"
+        columns:
+          - name: match_id
+            description: "The unique identifier for each player"
+            data_tests:
+              - not_null
+      
+      - name: players
+        description: "Raw players data from Kaggle"
+        columns:
+          - name: player_id
+            description: "The unique identifier for each player"
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: seasons
+        description: "Raw seasons data from Kaggle"
+        columns:
+          - name: season_id
+            description: "The unique identifier for each season"
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: teams
+        description: "Raw teams data from Kaggle"
+        columns:
+          - name: team_id
+            description: "The unique identifier for each team"
+            data_tests:
+              - unique
+              - not_null
+      
+
+
+      

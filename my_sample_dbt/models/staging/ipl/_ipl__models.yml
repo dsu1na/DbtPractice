@@ -1,0 +1,4 @@
+models:
+  - name: stg_ipl__teams
+    description: "This is the staging model for the customers data from Kaggle"
+    columns:

@@ -16,3 +16,11 @@ dbt debug # To check connection
 dbt seed
 dbt run
 dbt test
+
+
+## Dataset Kaggle link
+
+https://www.kaggle.com/datasets/harsha547/indian-premier-league-csv-dataset
+
+
+There are 6 csv files and be used to create a database with the following data.
